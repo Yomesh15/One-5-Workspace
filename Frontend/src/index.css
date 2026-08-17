@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sekuya&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --font-sekuya: "Sekuya", cursive;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--font-inter);
+}
+
+/* Sekuya custom font */
+.font-sekuya {
+    font-family: var(--font-sekuya);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #111111;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+}
+
