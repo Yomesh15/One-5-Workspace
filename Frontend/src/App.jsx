@@ -25,6 +25,8 @@ import DashboardPreview from './member/pages/DashboardPreview'
 import OwnerProfile from './owner/pages/OwnerProfile'
 import ParticularTasks from './member/pages/ParticularTasks'
 import TaskResponse from './owner/pages/TaskResponse'
+import AdminLogin from './admin/pages/AdminLogin'
+import AdminHome from './admin/pages/AdminHome'
 
 
 const App = () => {
@@ -60,6 +62,13 @@ const App = () => {
         <Route path='/owner-task-response/:id' element={<TaskResponse />} />
         <Route path='/owner-team' element={<Team />} />
         <Route path='/owner-profile' element={<OwnerProfile />} />
+
+
+
+        {/* addmin  */}
+        <Route path='/admin-login' element={<AdminLogin />} />
+        <Route path='/admin-home' element={<AdminHome />} />
+
 
       </Routes>
 

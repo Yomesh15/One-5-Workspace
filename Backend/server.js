@@ -6,6 +6,7 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import MemberRoute from "./routes/member.route.js"
 import OwnerRoute from "./routes/owner.route.js"
+import AdminRoute from "./routes/admin.route.js"
 
 
 const app = express()
@@ -17,7 +18,7 @@ connectDB()
 
 // middlewares
 app.use(cors({
-    origin:"https://one-5-workspace.vercel.app",
+    origin:["https://one-5-workspace.vercel.app", "http://localhost:5173"],
     credentials:true
 }))
 app.use(cookieParser())
@@ -27,6 +28,7 @@ app.use(express.json())
 // routes 
 app.use("/member", MemberRoute)
 app.use("/owner", OwnerRoute)
+app.use("/admin", AdminRoute)
 
 
 
