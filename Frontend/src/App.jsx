@@ -27,6 +27,7 @@ import ParticularTasks from './member/pages/ParticularTasks'
 import TaskResponse from './owner/pages/TaskResponse'
 import AdminLogin from './admin/pages/AdminLogin'
 import AdminHome from './admin/pages/AdminHome'
+import AdminProtect from './admin/protect/adminprotect'
 
 
 const App = () => {
@@ -49,7 +50,7 @@ const App = () => {
         <Route path='/member-dashboard' element={<DashboardPreview />} />
 
         {/* owner  */}
-        <Route path='/owner' element={<OwnerLanding/>} />
+        <Route path='/owner' element={<OwnerLanding />} />
         <Route path='/owner-home' element={<OwnerHome />} />
         <Route path='/owner-register' element={<OwnerRegister />} />
         <Route path='/owner-login' element={<OwnerLogin />} />
@@ -67,7 +68,11 @@ const App = () => {
 
         {/* addmin  */}
         <Route path='/admin-login' element={<AdminLogin />} />
-        <Route path='/admin-home' element={<AdminHome />} />
+        <Route path='/admin-home' element={
+          <AdminProtect>
+            <AdminHome />
+          </AdminProtect>
+        } />
 
 
       </Routes>
