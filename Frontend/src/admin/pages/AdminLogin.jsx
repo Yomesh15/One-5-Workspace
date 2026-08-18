@@ -46,7 +46,7 @@ const AdminLogin = () => {
 
             if (response.data.success) {
                 toast.success(response.data.message);
-                localStorage.setItem("one5workspaceadmin",response.data.admin)
+                localStorage.setItem("one5workspaceadmin",JSON.stringify(response.data.admin))
 
                 navigate("/admin-home");
             }
