@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const AdminProtect = () => {
+const AdminProtect = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
         const admin = localStorage.getItem("one5workspaceadmin");
 
         if (!admin) {
-            navigate("/member-home");
+            navigate("/admin-login", { replace: true });
         }
     }, [navigate]);
 
-    return <Outlet />;
+    return children;
 };
 
 export default AdminProtect;
