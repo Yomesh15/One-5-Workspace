@@ -10,23 +10,12 @@ admin_router.post("/login", AdminLogin);
 
 
 admin_router.get("/currentadmin", isAdmin, CurrentAdmin);
-
 admin_router.post("/logout", isAdmin, AdminLogout);
-
 admin_router.get("/dashboard", isAdmin, AdminDashboard);
-
 admin_router.get("/owners", isAdmin, AllOwners);
-
 admin_router.get("/members", isAdmin, AllMembers);
-
 admin_router.get("/workspaces", isAdmin, AllWorkspaces);
-
-admin_router.get(
-    "/workspace/:id",
-    isAdmin,
-    ParticularWorkspace
-);
-
+admin_router.get("/workspace/:id", isAdmin, ParticularWorkspace);
 admin_router.get("/tasks", isAdmin, AllTasks);
 
 

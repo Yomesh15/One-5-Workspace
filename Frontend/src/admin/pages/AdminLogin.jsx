@@ -125,7 +125,7 @@ const AdminLogin = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder="admin@one5workspace.com"
+                                    placeholder="admin@gmail.com"
                                     className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-11 pr-4 text-sm outline-none transition focus:border-black focus:bg-white"
                                 />
                             </div>

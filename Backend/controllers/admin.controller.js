@@ -8,9 +8,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 
-// =====================================================
-// ADMIN LOGIN
-// =====================================================
+
 
 export const AdminLogin = async (req, res) => {
     try {
@@ -81,10 +79,8 @@ export const AdminLogin = async (req, res) => {
     }
 };
 
+ 
 
-// =====================================================
-// CURRENT ADMIN
-// =====================================================
 
 export const CurrentAdmin = async (req, res) => {
     try {
@@ -112,10 +108,8 @@ export const CurrentAdmin = async (req, res) => {
     }
 };
 
+ 
 
-// =====================================================
-// ADMIN LOGOUT
-// =====================================================
 
 export const AdminLogout = async (req, res) => {
     try {
@@ -138,10 +132,8 @@ export const AdminLogout = async (req, res) => {
     }
 };
 
+ 
 
-// =====================================================
-// ADMIN DASHBOARD
-// =====================================================
 
 export const AdminDashboard = async (req, res) => {
     try {
@@ -207,9 +199,8 @@ export const AdminDashboard = async (req, res) => {
 
 
 
-// =====================================================
-// GET ALL OWNERS
-// =====================================================
+ 
+
 
 export const AllOwners = async (req, res) => {
     try {
@@ -238,10 +229,8 @@ export const AllOwners = async (req, res) => {
 
 
 
+ 
 
-// =====================================================
-// GET ALL MEMBERS
-// =====================================================
 
 export const AllMembers = async (req, res) => {
     try {
@@ -271,10 +260,8 @@ export const AllMembers = async (req, res) => {
 
 
 
+ 
 
-// =====================================================
-// GET ALL WORKSPACES
-// =====================================================
 
 export const AllWorkspaces = async (req, res) => {
     try {
@@ -305,10 +292,7 @@ export const AllWorkspaces = async (req, res) => {
 
 
 
-
-// =====================================================
-// PARTICULAR WORKSPACE
-// =====================================================
+ 
 
 export const ParticularWorkspace = async (req, res) => {
     try {
@@ -346,10 +330,8 @@ export const ParticularWorkspace = async (req, res) => {
 
 
 
+ 
 
-// =====================================================
-// ALL TASKS
-// =====================================================
 
 export const AllTasks = async (req, res) => {
     try {
