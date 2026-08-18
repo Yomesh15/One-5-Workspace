@@ -100,7 +100,12 @@ export const LoginOwner = async (req, res) => {
             { expiresIn: "5d" }
         )
 
-        res.cookie("ownertoken", token)
+        res.cookie("ownertoken", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+            maxAge: 5 * 24 * 60 * 60 * 1000,
+        });
 
         let ownerdata = owner.toObject()
         delete ownerdata.password;

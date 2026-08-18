@@ -17,7 +17,7 @@ connectDB()
 
 // middlewares
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://one-5-workspace.vercel.app",
     credentials:true
 }))
 app.use(cookieParser())

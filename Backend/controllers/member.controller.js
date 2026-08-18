@@ -98,7 +98,12 @@ export const LoginMember = async (req, res) => {
             { expiresIn: "5d" }
         )
 
-        res.cookie("membertoken", token)
+        res.cookie("membertoken", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+            maxAge: 5 * 24 * 60 * 60 * 1000,
+        });
 
         let memberdata = member.toObject()
         delete memberdata.password;
