@@ -98,11 +98,10 @@ export const LoginMember = async (req, res) => {
             { expiresIn: "5d" }
         )
 
-        res.cookie("membertoken", token, {
+        res.clearCookie("membertoken", {
             httpOnly: true,
             secure: true,
             sameSite: "none",
-            maxAge: 5 * 24 * 60 * 60 * 1000,
         });
 
         let memberdata = member.toObject()
