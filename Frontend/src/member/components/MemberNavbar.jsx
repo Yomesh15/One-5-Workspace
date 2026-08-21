@@ -71,6 +71,7 @@ const MemberNavbar = () => {
     };
   }, []);
 
+  
   const handleLogout = async () => {
     try {
       await axios.post(

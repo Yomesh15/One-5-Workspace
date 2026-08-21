@@ -123,7 +123,11 @@ export const LoginMember = async (req, res) => {
 export const LogoutMember = async (req, res) => {
     try {
 
-        res.clearCookie("membertoken")
+        res.clearCookie("membertoken", {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+        });
 
         return res.status(200).json({ message: "Logged out successfully", success: true })
 
