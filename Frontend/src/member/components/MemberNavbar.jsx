@@ -31,6 +31,7 @@ const MemberNavbar = () => {
           withCredentials: true,
         }
       );
+      
 
       if (res.data.success) {
         setMember(res.data.member);
