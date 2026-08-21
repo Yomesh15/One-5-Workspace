@@ -31,7 +31,7 @@ const MemberNavbar = () => {
           withCredentials: true,
         }
       );
-      
+
 
       if (res.data.success) {
         setMember(res.data.member);
@@ -39,6 +39,10 @@ const MemberNavbar = () => {
         setMember(null);
       }
     } catch (error) {
+      console.log("CURRENT MEMBER ERROR:", error);
+      console.log("STATUS:", error.response?.status);
+      console.log("DATA:", error.response?.data);
+
       setMember(null);
     }
   };
@@ -46,6 +50,7 @@ const MemberNavbar = () => {
   useEffect(() => {
     fetchMember();
   }, []);
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
