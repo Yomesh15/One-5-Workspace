@@ -43,9 +43,10 @@ const MemberLogin = () => {
           JSON.stringify(res.data.member)
         );
 
-        window.scrollTo({top:0, behavior:"smooth"})
-
+        
         navigate("/member-home");
+        
+        window.scrollTo({top:0, behavior:"smooth"})
 
       }
     } catch (error) {
