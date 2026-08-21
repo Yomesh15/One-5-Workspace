@@ -32,6 +32,8 @@ const MemberNavbar = () => {
         }
       );
 
+      console.log("Response : ",res);
+      
 
       if (res.data.success) {
         setMember(res.data.member);
