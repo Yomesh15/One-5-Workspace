@@ -44,6 +44,8 @@ const MemberLogin = () => {
         );
 
         navigate("/member-home");
+
+        window.scrollTo({top:0, behavior:"smooth"})
       }
     } catch (error) {
       setLoading(false);
