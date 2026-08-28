@@ -28,6 +28,7 @@ import TaskResponse from './owner/pages/TaskResponse'
 import AdminLogin from './admin/pages/AdminLogin'
 import AdminHome from './admin/pages/AdminHome'
 import AdminProtect from './admin/protect/adminprotect'
+import NotFound from './NotFound'
 
 
 const App = () => {
@@ -74,6 +75,8 @@ const App = () => {
           </AdminProtect>
         } />
 
+
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
 
