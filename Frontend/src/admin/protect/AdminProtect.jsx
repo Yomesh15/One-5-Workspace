@@ -14,7 +14,7 @@ const AdminProtect = ({ children }) => {
         }
 
         setChecking(false);
-    }, [navigate]);
+    }, [navigate]);``
 
     if (checking) {
         return (
